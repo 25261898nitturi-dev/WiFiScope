@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>WiFiScope | WiFi Analyser</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>WiFiScope</h1>
+<p>Discover. Analyse. Connect.</p>
+
+        <p>Real-Time Network Monitoring Dashboard</p>
+
+    </header>
+
+
+    <!-- CONNECTED NETWORK -->
+
+    <section class="card connected">
+
+        <h2>Connected Network</h2>
+
+        <h1 id="wifiName">Loading...</h1>
+
+        <p id="connection">Connecting...</p>
+
+    </section>
+
+
+    <!-- MAIN INFORMATION -->
+
+    <div class="grid">
+
+        <section class="card">
+
+            <h2>Signal Strength</h2>
+
+            <div class="circle">
+
+                <span id="signal">--%</span>
+
+            </div>
+
+            <h2 id="quality">Loading...</h2>
+
+            <p id="rssi">RSSI: Not available</p>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Network Information</h2>
+
+            <p>Frequency: <b id="band">--</b></p>
+
+            <p>Channel: <b id="channel">--</b></p>
+
+            <p>WiFi Standard: <b id="radio">--</b></p>
+
+            <p>Security: <b id="security">--</b></p>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Connection Speed</h2>
+
+            <p>Receive Rate</p>
+
+            <h2 id="receive">-- Mbps</h2>
+
+            <p>Transmit Rate</p>
+
+            <h2 id="transmit">-- Mbps</h2>
+
+        </section>
+
+    </div>
+
+
+    <!-- SIGNAL HISTORY -->
+
+    <section class="card history">
+
+        <h2>Live Signal History</h2>
+
+        <canvas id="signalChart"></canvas>
+
+    </section>
+
+
+    <!-- NEARBY NETWORKS -->
+
+    <section class="card nearby">
+
+        <h2>📡 Nearby WiFi Networks</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>SSID</th>
+                        <th>BSSID</th>
+                        <th>Signal</th>
+                        <th>Channel</th>
+                        <th>Security</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="nearbyNetworks">
+
+                    <tr>
+                        <td colspan="5">Loading networks...</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>Smart WiFi Analyser | Java Spring Boot Project</p>
+
+    </footer>
+
+</div>
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>
